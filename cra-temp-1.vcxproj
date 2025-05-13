@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="clac_test.cpp" />
+    <ClCompile Include="calc.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
