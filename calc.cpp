@@ -3,6 +3,9 @@
 class Cal
 {
 public:
+	int getSumSum(int a, int b, int c) {
+		return a + b + c;
+	}
 	int getDevide(int a, int b) {
 		if (b == 0) {
 			std::cout << "Error occured due to b = 0" << std::endl;
@@ -31,6 +34,11 @@ TEST(CalTest, devideposTest) {
 TEST(CalTest, devidenegTest) {
 	Cal cal;
 	EXPECT_EQ(-3, cal.getDevide(3, -1));
+}
+TEST(getSumSum, t1) {
+	Cal c;
+
+	EXPECT_EQ(10, c.getSumSum(2, 3, 5));
 }
 
 int main()
