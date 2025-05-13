@@ -3,6 +3,10 @@
 class Cal
 {
 public:
+	int getZegop(int a)
+	{
+		return a * a;
+	}
 	int getGop(int a, int b)
 	{
 		return a * b;
@@ -19,7 +23,6 @@ public:
 			return a / b;
 		}
 	}
-
 };
 
 TEST(t1, t2)
@@ -49,6 +52,16 @@ TEST(calc, Gop)
 {
 	Cal calc;
 	EXPECT_EQ(12,calc.getGop(3,4));
+}
+
+TEST(Calculator, Zegop_Positive)
+{
+	Cal cal;
+	for (int number = -10; number <= 10; number++)
+	{
+		int result = cal.getZegop(number);
+		EXPECT_EQ(number * number, result);
+	}
 }
 
 int main()
