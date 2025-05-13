@@ -3,6 +3,9 @@
 class Cal
 {
 public:
+	int getSum(int a, int b) {
+		return a + b;
+	}
 	int getZegop(int a)
 	{
 		return a * a;
@@ -62,6 +65,12 @@ TEST(Calculator, Zegop_Positive)
 		int result = cal.getZegop(number);
 		EXPECT_EQ(number * number, result);
 	}
+}
+
+TEST(calc, SumTC) {
+	Cal cal;
+
+	EXPECT_EQ(8, cal.getSum(3, 5));
 }
 
 int main()
